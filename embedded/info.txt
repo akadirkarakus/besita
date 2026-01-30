@@ -1,0 +1,8 @@
+Bu klasör projenin gömülü sistem kısımlarında bulunacak olan kodları içerir.
+Analog to Digital Converter cihzından çıkan veriler ESP32 cihazına gelecektir.
+Yüzlerce tartım kaydından oluşan bu veri, paketler halinde Raspberry Pi'ye gönderilecektir.
+Başlıca Görevler:
+    Anlık veri  toplama.
+    Veriyi json formatında paketleme
+    Raspberry Pi ile iletişim sağlama.
+    json paketleri gönderme.
