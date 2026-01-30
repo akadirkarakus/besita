@@ -1,1 +1,0 @@
-besita := besi takip sistemi

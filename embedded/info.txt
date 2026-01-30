@@ -1,8 +1,42 @@
+# Embedded Systems (Gömülü Sistemler)
+
 Bu klasör projenin gömülü sistem kısımlarında bulunacak olan kodları içerir.
-Analog to Digital Converter cihzından çıkan veriler ESP32 cihazına gelecektir.
-Yüzlerce tartım kaydından oluşan bu veri, paketler halinde Raspberry Pi'ye gönderilecektir.
-Başlıca Görevler:
-    Anlık veri  toplama.
-    Veriyi json formatında paketleme
-    Raspberry Pi ile iletişim sağlama.
-    json paketleri gönderme.
+
+## Genel Açıklama
+Analog to Digital Converter (ADC) cihazından çıkan ağırlık verileri ESP32 mikrodenetleyicisine gelir.
+Yüzlerce tartım kaydından oluşan bu veriler JSON formatında paketlenerek Raspberry Pi'ye gönderilir.
+
+## ESP32 Görevleri
+
+1. **Veri Toplama**
+   - ADC portundan anlık olarak ağırlık sensörü verisini oku
+   - Hata kontrolü (sensor bağlantısı, aralık kontrolü)
+
+2. **Veri Paketleme**
+   - Verileri JSON formatında düzenle
+   - Örnek paket:
+
+3. **İletişim**
+   - Raspberry Pi'ye TCP/UDP veya MQTT ile bağlantı
+   - Bağlantı durumu kontrolü
+   - Yeniden bağlantı mekanizması
+
+4. **Gönderme**
+   - JSON paketlerini Raspberry Pi'ye gönder
+   - Başarı/hata logları
+
+## Teknolojiler
+
+- ESP32: Ardunio IDE veya PlatformIO
+- Sensör: Load cell (ağırlık sensörü) + ADS1232 ADC Module
+- İletişim: WiFi (TCP/UDP) veya Bluetooth (opsiyonel)
+- Veri Formatı: JSON
+
+## Yapılacaklar
+
+- [ ] ESP32 ana kodunu yaz
+- [ ] ADC okuma ve kalibrasyonu
+- [ ] JSON paketleme
+- [ ] Raspberry Pi bağlantısı
+- [ ] Hata yönetimi
+- [ ] Logling sistemi
