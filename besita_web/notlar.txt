@@ -1,0 +1,3 @@
+models.py gerekli fonksiyonlar
+-verilen iki tartım arasındaki hayvanın kilo artışını
+-verilen iki tartım arasında hayvanın günlük kilo artışını
